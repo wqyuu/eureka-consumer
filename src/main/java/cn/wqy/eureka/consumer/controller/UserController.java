@@ -63,4 +63,9 @@ public class UserController {
     public String index(@PathVariable("name") String name) {
         return userService.hello(name);
     }
+
+    @RequestMapping("/register")
+    public String register(){
+        return "/addUser";
+    }
 }

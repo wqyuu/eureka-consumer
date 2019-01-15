@@ -10,6 +10,18 @@ spring:
   #激活哪一个环境的配置文件
   profiles:
     active: dev
+  #整合thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    #mode: HTML
+    encoding: UTF-8
+    content-type: text/html
+    # 关闭缓存, 即时刷新, 上线生产环境需要改为true
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
+
 
 #配置eureka获取服务地址，这里使用的是本地注册中心
 eureka:
@@ -61,7 +73,6 @@ spring:
 logging:
   config: classpath:log/logback.xml
   path: D:/APP/SpingBoot/spring-cloud-study/logs/cloud-demo
-
 
 
 

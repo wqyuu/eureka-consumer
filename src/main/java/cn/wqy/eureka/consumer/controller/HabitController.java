@@ -75,4 +75,9 @@ public class HabitController {
         return "/planList";
 
     }
+
+    @GetMapping(value = "/hmoe")
+    public String Home(){
+        return "/index";
+    }
 }
